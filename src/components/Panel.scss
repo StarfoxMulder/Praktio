@@ -1,0 +1,92 @@
+.Panel {
+  flex: 1 0 auto;
+  display: flex;
+  position: relative;
+
+  .split-panel {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: 100%;
+
+    .top-split,
+    .bottom-split {
+      position: relative;
+    }
+
+    .panel-overlay {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      display: flex;
+
+      .overlay-dialog-max {
+        height: calc(100% - 57px);
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .overlay-dialog-container {
+          padding: 20px 10px 20px 20px;
+          width: 90%;
+          max-height: 90%;
+          font-size: 18px;
+          background: #fff;
+
+          .overlay-dialog {
+            overflow-y: auto;
+            padding-right: 10px;
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .overlay-button {
+      border: none !important;
+      color: #fff;
+      background-color: #0d8bcd;
+      position: absolute;
+      z-index: 3;
+      padding: 5px 20px;
+      bottom: 25px;
+      height: 40px !important;
+      left: 25px;
+      font-size: 18px !important;
+      border-radius: 25px !important;
+      font-weight: 600 !important;
+      display: flex;
+      align-items: center;
+
+      .fa-chevron-left {
+        margin-right: 8px;
+      }
+    }
+
+    .top-split {
+      min-height: 30%;
+      max-height: 40%;
+      flex: 1 1;
+    }
+
+    .bottom-split {
+      flex-grow: 1;
+      background-color: #fff;
+      border: 3px solid #0d8bcd;
+      width: 100%;
+      overflow-y: auto;
+
+      .reference-content {
+        padding: 25px 30px;
+      }
+    }
+  }
+}

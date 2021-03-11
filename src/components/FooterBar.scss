@@ -1,0 +1,149 @@
+@import '../utils/colors.scss';
+
+.FooterBar {
+  background-color: $DarkBlue;
+  padding: 4px 10px;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 40px;
+
+  &.is-dark {
+    background-color: $DarkGray;
+  }
+
+  &.is-light {
+    background-color: $Gray2;
+  }
+
+  .left-container,
+  .right-container {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .left-container {
+    .left-group {
+      display: flex;
+
+      .feedback-button {
+        margin-right: 8px;
+      }
+
+      .material-icons {
+        margin-right: 4px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .middle-container {
+    width: 350px;
+    margin: 0 8px;
+
+    .progress-container {
+      background-color: white;
+      width: 100%;
+      height: 100%;
+
+      .progress-bar {
+        background-color: $Blue;
+        color: white;
+        line-height: 30px;
+        font-size: 15px;
+        min-height: 32px;
+      }
+
+      .progress-value {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #000 !important;
+        font-weight: 700 !important;
+      }
+    }
+  }
+
+  .right-container {
+    .white-label {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px 0;
+
+      img {
+        height: 100%;
+        object-fit: scale-down;
+      }
+    }
+  }
+
+  .btn-pa {
+    text-transform: uppercase;
+  }
+
+  .app-messages-container-litmos {
+    position: absolute;
+    transform: translateY(-150%) translateX(-50%);
+    margin: 0 auto;
+    width: 350px;
+    left: 50%;
+
+    & .alert {
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+      padding: 5px;
+
+      &.fade-enter {
+        opacity: 0.01;
+      }
+
+      &.fade-enter.fade-enter-active {
+        opacity: 1;
+        transition: opacity 300ms ease-in;
+      }
+
+      &.fade-exit {
+        opacity: 1;
+      }
+
+      &.fade-exit.fade-exit-active {
+        opacity: 0.01;
+        transition: opacity 300ms ease-in;
+      }
+    }
+  }
+
+  .closable-tooltip {
+    padding: 0 9px;
+    position: relative;
+
+    .action-items {
+      display: flex;
+      position: absolute;
+      top: -3px;
+      right: -9px;
+
+      i {
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .svg-inline--fa:not(.fa-cog) {
+    vertical-align: -2px !important;
+  }
+}

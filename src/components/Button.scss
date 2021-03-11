@@ -1,0 +1,76 @@
+@import '../utils/colors.scss';
+
+.Button {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: normal !important;
+  font-size: 15px !important;
+  color: $DarkGray !important;
+  background-color: #fff !important;
+  border: 1px solid $Gray !important;
+  border-radius: 1px !important;
+  max-height: 32px !important;
+  height: 32px !important;
+  line-height: 1 !important;
+  text-transform: uppercase;
+
+  &.btn-primary {
+    color: #fff !important;
+    background-color: $Blue !important;
+    border-color: $Blue !important;
+
+    > a {
+      color: #fff !important;
+    }
+  }
+
+  &.btn:hover,
+  &.btn:active,
+  &.active {
+    background-color: $LightBlue !important;
+    border-color: $Blue !important;
+  }
+
+  &.btn:hover {
+    color: $DarkGray !important;
+
+    > a {
+      color: $DarkGray !important;
+    }
+  }
+
+  &.btn:active,
+  &.active {
+    color: $Blue !important;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  &.btn:focus {
+    outline: 1px solid $Blue !important;
+    outline-offset: 2px !important;
+  }
+
+  &.btn-sm {
+    font-size: 12px !important;
+    height: 20px !important;
+  }
+
+  &.disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: $LightGray !important;
+      background-color: $Gray !important;
+      border-color: $Gray !important;
+      outline: none !important;
+      box-shadow: none !important;
+      cursor: not-allowed !important;
+      opacity: 1 !important;
+    }
+  }
+
+  &.toggled {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+    background-color: darken($LightBlue, 10%) !important;
+  }
+}

@@ -1,0 +1,10 @@
+@import '../utils/colors.scss';
+
+.Activity {
+  max-height: calc(100% - 80px);
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100% - 51px) !important;
+}
